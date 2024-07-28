@@ -1,0 +1,21 @@
+pipeline   // comment: declarative pipeline always start with pipeline
+{
+   agent any //run below stages on any executirs or build vm    
+   stages//(it contain all the stages)
+    {
+        stage('print a msg') //stage name
+        {
+            steps { echo 'code checkout..' } //it tells jenkins what to do
+        }
+
+        stage('print a msg') //stage name
+        {
+            steps { echo 'code building..' } //it tells jenkins what to do
+        }
+
+       stage('print a msg') //stage name
+        {
+            steps { echo 'code deployed.' } //it tells jenkins what to do
+        }
+    }
+}
